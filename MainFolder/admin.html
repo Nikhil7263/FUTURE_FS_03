@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Ember & Oak</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <a href="index.html">Ember <span>&</span> Oak</a>
+      <p>Admin Dashboard</p>
+    </div>
+    <nav class="sidebar-nav">
+      <a class="nav-item active" href="#"><span class="nav-icon">📋</span> Reservations</a>
+      <a class="nav-item" href="#" onclick="showToast('Coming soon!','warning');return false;"><span class="nav-icon">📊</span> Analytics</a>
+      <a class="nav-item" href="#" onclick="showToast('Coming soon!','warning');return false;"><span class="nav-icon">🍽️</span> Menu Manager</a>
+      <a class="nav-item" href="#" onclick="showToast('Coming soon!','warning');return false;"><span class="nav-icon">👥</span> Guests</a>
+      <a class="nav-item" href="#" onclick="showToast('Coming soon!','warning');return false;"><span class="nav-icon">⚙️</span> Settings</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="index.html" class="back-link">← Back to Website</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-title">
+        <h1>Reservations</h1>
+        <p id="last-updated">Loading bookings...</p>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn-sm btn-outline" onclick="exportCSV()">⬇ Export CSV</button>
+        <button class="btn-sm btn-danger" onclick="clearAllBookings()">🗑 Clear All</button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card total">
+        <div class="stat-label">Total Bookings</div>
+        <div class="stat-value" id="stat-total">0</div>
+        <div class="stat-sub">All time</div>
+      </div>
+      <div class="stat-card pending">
+        <div class="stat-label">Pending</div>
+        <div class="stat-value" id="stat-pending">0</div>
+        <div class="stat-sub">Awaiting confirmation</div>
+      </div>
+      <div class="stat-card confirmed">
+        <div class="stat-label">Confirmed</div>
+        <div class="stat-value" id="stat-confirmed">0</div>
+        <div class="stat-sub">Ready to serve</div>
+      </div>
+      <div class="stat-card today">
+        <div class="stat-label">Today's Bookings</div>
+        <div class="stat-value" id="stat-today">0</div>
+        <div class="stat-sub" id="today-date">—</div>
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Pending">Pending</button>
+      <button class="filter-btn" data-filter="Confirmed">Confirmed</button>
+      <button class="filter-btn" data-filter="Cancelled">Cancelled</button>
+      <button class="filter-btn" data-filter="Completed">Completed</button>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search by name, email, ID..." oninput="renderTable()">
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>Booking Records</h3>
+        <span class="count-badge" id="visible-count">0 bookings</span>
+      </div>
+      <div id="table-container"></div>
+    </div>
+
+    <!-- Back link for mobile -->
+    <div style="margin-top:24px;display:none" id="mobile-back">
+      <a href="index.html" style="font-size:0.75rem;color:var(--muted);text-decoration:none;">← Back to Website</a>
+    </div>
+  </main>
+</div>
+
+<!-- Detail Modal -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-head">
+      <h3 id="modal-title">Booking Details</h3>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-actions" id="modal-actions"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="admin-toast" id="admin-toast"></div>
+
+<script src="admin.js"></script>
+</body>
+</html>

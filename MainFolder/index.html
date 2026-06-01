@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember & Oak — Fine Dining Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Ember <span>&</span> Oak</a>
+  <ul class="nav-links">
+    <li><a href="#about">Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reserve">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Reserve a Table</button>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Est. 2019 · Fine Dining</div>
+    <h1 class="hero-title">Where Fire<br>Meets <em>Flavour</em></h1>
+    <p class="hero-subtitle">A culinary journey through wood-fired cuisine, aged wines, and the timeless art of gathering around a table.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">Explore Menu</a>
+      <a href="#reserve" class="btn-ghost">Reserve a Table</a>
+    </div>
+  </div>
+  <div class="hero-image-panel">
+    <div class="plate-illustration">
+      <svg class="plate-svg" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="130" cy="130" r="120" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+        <circle cx="130" cy="130" r="100" fill="none" stroke="rgba(201,168,76,0.1)" stroke-width="0.5" stroke-dasharray="4 8"/>
+        <circle cx="130" cy="130" r="80" fill="rgba(26,18,10,0.6)" stroke="rgba(201,168,76,0.2)" stroke-width="0.5"/>
+        <text x="130" y="150" font-size="50" text-anchor="middle" fill="rgba(200,87,42,0.6)">🍽</text>
+        <text x="130" y="30" font-size="9" font-family="Montserrat,sans-serif" fill="rgba(201,168,76,0.5)" text-anchor="middle" letter-spacing="4">EMBER</text>
+        <text x="130" y="240" font-size="9" font-family="Montserrat,sans-serif" fill="rgba(201,168,76,0.5)" text-anchor="middle" letter-spacing="4">& OAK</text>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Wood-Fired Cuisine</span>
+    <span class="marquee-item">Award-Winning Chef</span>
+    <span class="marquee-item">Curated Wine List</span>
+    <span class="marquee-item">Private Dining</span>
+    <span class="marquee-item">Seasonal Menu</span>
+    <span class="marquee-item">Open Tuesday–Sunday</span>
+    <span class="marquee-item">Wood-Fired Cuisine</span>
+    <span class="marquee-item">Award-Winning Chef</span>
+    <span class="marquee-item">Curated Wine List</span>
+    <span class="marquee-item">Private Dining</span>
+    <span class="marquee-item">Seasonal Menu</span>
+    <span class="marquee-item">Open Tuesday–Sunday</span>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="about-visual reveal">
+    <div class="about-main-img">
+      <div class="about-year">2019</div>
+    </div>
+    <div class="about-accent-img"></div>
+    <div class="about-badge"><span>15+</span><span>Awards</span></div>
+  </div>
+  <div class="about-text">
+    <div class="section-eyebrow reveal">Our Story</div>
+    <h2 class="section-title reveal reveal-delay-1">Craft. Fire.<br><em>Community.</em></h2>
+    <p class="reveal reveal-delay-2">Ember & Oak was born from a simple belief: that food cooked over fire, made with honest ingredients, and shared among people who care — is the most powerful thing a table can hold.</p>
+    <p class="reveal reveal-delay-3">Founded by Chef Arjun Mehta and sommelier Priya Nair, our kitchen celebrates locally sourced produce, ancient wood-fire techniques, and a menu that changes with every season.</p>
+    <div class="about-stats reveal">
+      <div class="stat-item">
+        <div class="stat-num">12+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">48</div>
+        <div class="stat-label">Seasonal Dishes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4.9</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="menu-section" id="menu">
+  <div class="menu-header">
+    <div class="section-eyebrow reveal">Curated Selections</div>
+    <h2 class="section-title reveal reveal-delay-1">Our <em>Menu</em></h2>
+  </div>
+  <div class="menu-tabs reveal">
+    <button class="menu-tab active" data-tab="starters">Starters</button>
+    <button class="menu-tab" data-tab="mains">Main Course</button>
+    <button class="menu-tab" data-tab="desserts">Desserts</button>
+    <button class="menu-tab" data-tab="drinks">Drinks</button>
+  </div>
+
+  <div class="menu-grid">
+    <!-- STARTERS -->
+    <div class="menu-panel active" data-panel="starters">
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Seared Scallops</span><span class="menu-item-price">₹1,290</span></div><p class="menu-item-desc">Pan-seared sea scallops with cauliflower purée, pancetta crisp, and lemon beurre blanc.</p><span class="menu-item-tag">Chef's Pick</span></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Burrata & Heirloom</span><span class="menu-item-price">₹950</span></div><p class="menu-item-desc">Creamy burrata with slow-roasted heirloom tomatoes, aged balsamic, and fresh basil oil.</p><span class="menu-item-tag">Vegetarian</span></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Bone Marrow Toast</span><span class="menu-item-price">₹1,050</span></div><p class="menu-item-desc">Roasted bone marrow on sourdough, parsley gremolata, sea salt flakes.</p></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Forest Mushroom Soup</span><span class="menu-item-price">₹780</span></div><p class="menu-item-desc">Porcini and truffle cream with chestnut foam and smoked paprika oil.</p><span class="menu-item-tag">Vegan Option</span></div>
+    </div>
+    <!-- MAINS -->
+    <div class="menu-panel" data-panel="mains">
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Wood-Fired Lamb Rack</span><span class="menu-item-price">₹2,850</span></div><p class="menu-item-desc">Herb-crusted New Zealand lamb rack, pommes dauphinoise, rosemary jus.</p><span class="menu-item-tag">Chef's Pick</span></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Dry-Aged Ribeye</span><span class="menu-item-price">₹3,200</span></div><p class="menu-item-desc">28-day dry-aged 300g ribeye, bone marrow butter, truffle fries, béarnaise.</p></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Pan-Roasted Halibut</span><span class="menu-item-price">₹2,100</span></div><p class="menu-item-desc">Halibut fillet, saffron risotto, charred leeks, caviar beurre blanc.</p></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Wild Mushroom Risotto</span><span class="menu-item-price">₹1,450</span></div><p class="menu-item-desc">Arborio rice, mixed wild mushrooms, aged Parmesan, truffle oil finish.</p><span class="menu-item-tag">Vegetarian</span></div>
+    </div>
+    <!-- DESSERTS -->
+    <div class="menu-panel" data-panel="desserts">
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Valrhona Chocolate Fondant</span><span class="menu-item-price">₹680</span></div><p class="menu-item-desc">Warm dark chocolate fondant, vanilla bean ice cream, hazelnut praline.</p><span class="menu-item-tag">Must Try</span></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Crème Brûlée</span><span class="menu-item-price">₹550</span></div><p class="menu-item-desc">Classic Madagascan vanilla custard, caramelised sugar crust, fresh berries.</p></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Tarte Tatin</span><span class="menu-item-price">₹620</span></div><p class="menu-item-desc">Caramelised apple tart with salted caramel sauce and clotted cream.</p></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Cheese Board</span><span class="menu-item-price">₹980</span></div><p class="menu-item-desc">Selection of 5 artisan cheeses, honeycomb, fig jam, walnut crackers.</p></div>
+    </div>
+    <!-- DRINKS -->
+    <div class="menu-panel" data-panel="drinks">
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Ember Old Fashioned</span><span class="menu-item-price">₹850</span></div><p class="menu-item-desc">Woodford Reserve, smoked maple syrup, Angostura, charred orange peel.</p><span class="menu-item-tag">Signature</span></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Truffle Martini</span><span class="menu-item-price">₹920</span></div><p class="menu-item-desc">Grey Goose vodka, truffle-infused dry vermouth, gold dust rim.</p></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Sommelier's Red</span><span class="menu-item-price">₹1,100</span></div><p class="menu-item-desc">Hand-picked Bordeaux selection, served at cellar temperature.</p></div>
+      <div class="menu-item"><div class="menu-item-header"><span class="menu-item-name">Zero-Proof Garden</span><span class="menu-item-price">₹480</span></div><p class="menu-item-desc">Cucumber, elderflower, mint, and yuzu soda. Refreshingly sophisticated.</p><span class="menu-item-tag">Non-Alcoholic</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="experience" id="experience">
+  <div class="experience-inner">
+    <div>
+      <div class="section-eyebrow reveal">Why Choose Us</div>
+      <h2 class="section-title reveal reveal-delay-1">An <em>Experience</em><br>Beyond the Plate</h2>
+      <div class="exp-features">
+        <div class="exp-feature reveal reveal-delay-1">
+          <div class="exp-icon">🔥</div>
+          <div>
+            <div class="exp-feature-title">Live Wood-Fire Kitchen</div>
+            <div class="exp-feature-desc">Watch our chefs work over an open wood-fire hearth in our chef's table area — theatre and dinner in one.</div>
+          </div>
+        </div>
+        <div class="exp-feature reveal reveal-delay-2">
+          <div class="exp-icon">🍷</div>
+          <div>
+            <div class="exp-feature-title">700-Label Wine Cellar</div>
+            <div class="exp-feature-desc">Our award-winning sommelier curates perfect pairings from a cellar holding bottles from 28 countries.</div>
+          </div>
+        </div>
+        <div class="exp-feature reveal reveal-delay-3">
+          <div class="exp-icon">🌿</div>
+          <div>
+            <div class="exp-feature-title">Farm-to-Table Sourcing</div>
+            <div class="exp-feature-desc">80% of our produce comes from within 150 km. We name our farmers on our menu — they deserve the credit.</div>
+          </div>
+        </div>
+        <div class="exp-feature reveal">
+          <div class="exp-icon">🎵</div>
+          <div>
+            <div class="exp-feature-title">Live Jazz Fridays & Saturdays</div>
+            <div class="exp-feature-desc">Resident quartet sets the mood every Friday and Saturday evening from 8 PM onwards.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="exp-visual reveal">
+      <div class="exp-card exp-card-main">
+        <div class="dining-illustration">🕯️</div>
+      </div>
+      <div class="exp-card exp-card-overlay">
+        <div class="rating">4.9</div>
+        <div class="rating-label">Google Reviews</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-header">
+    <div class="section-eyebrow reveal">Guest Reviews</div>
+    <h2 class="section-title reveal reveal-delay-1">What Our Guests <em>Say</em></h2>
+  </div>
+  <div class="testimonials-grid reveal">
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">The lamb rack was the most extraordinary thing I've eaten in years. The atmosphere, the wine, the service — every detail was considered. This is what fine dining should feel like.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">R</div>
+        <div>
+          <div class="author-name">Riya Sharma</div>
+          <div class="author-detail">Google Review · 5 stars</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card featured">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">We hosted our anniversary dinner here and the team made it completely magical. The private room, the personalised menu, the jazz — truly a night we'll never forget.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">K</div>
+        <div>
+          <div class="author-name">Kabir & Natasha</div>
+          <div class="author-detail">Zomato Review · 5 stars</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">I've dined across Mumbai, Delhi, and internationally. Ember & Oak consistently ranks among my top five globally. The wood-fire scallops are mandatory.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">A</div>
+        <div>
+          <div class="author-name">Anand Pillai</div>
+          <div class="author-detail">TripAdvisor · Top Reviewer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <div class="section-eyebrow reveal">Our World</div>
+    <h2 class="section-title reveal reveal-delay-1">Inside <em>Ember & Oak</em></h2>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item">
+      <div class="gallery-inner">🔥</div>
+      <div class="gallery-overlay"><span class="gallery-caption">The Hearth</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">🍽️</div>
+      <div class="gallery-overlay"><span class="gallery-caption">Signature Plating</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">🍷</div>
+      <div class="gallery-overlay"><span class="gallery-caption">Wine Cellar</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">🌿</div>
+      <div class="gallery-overlay"><span class="gallery-caption">Garden Terrace</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-inner">🎶</div>
+      <div class="gallery-overlay"><span class="gallery-caption">Jazz Evenings</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reservation -->
+<section class="reservation" id="reserve">
+  <div class="reservation-inner">
+    <div class="reservation-info">
+      <div class="section-eyebrow reveal">Book Your Evening</div>
+      <h2 class="section-title reveal reveal-delay-1">Reserve a<br><em>Table</em></h2>
+      <p class="reveal reveal-delay-2">Whether it's a quiet dinner for two, a celebratory gathering, or a business meal that leaves an impression — we'll make it unforgettable.</p>
+      <div class="contact-items reveal">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><strong>+91 98765 43210</strong><br>Reservations line</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><strong>12 Koregaon Park, Pune</strong><br>Landmark: Lane 5, Near Phoenix</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div><strong>Tue–Sun: 7 PM – 11:30 PM</strong><br>Monday: Closed</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <form class="reservation-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Arjun">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Mehta">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="arjun@example.com">
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="+91 98765 43210">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date">
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <select>
+              <option value="">Select Time</option>
+              <option>7:00 PM</option>
+              <option>7:30 PM</option>
+              <option>8:00 PM</option>
+              <option>8:30 PM</option>
+              <option>9:00 PM</option>
+              <option>9:30 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Guests</label>
+            <select>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5 Guests</option>
+              <option>6+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Occasion</label>
+            <select>
+              <option>Regular Dining</option>
+              <option>Anniversary</option>
+              <option>Birthday</option>
+              <option>Business Dinner</option>
+              <option>Proposal</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Special Requests</label>
+          <textarea placeholder="Dietary requirements, seating preferences, special arrangements..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Confirm Reservation</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">Ember <span style="color:var(--ember)">&</span> Oak</a>
+      <p>Where fire meets flavour. A wood-fire dining experience in the heart of Pune, crafted for those who believe the best meals are the ones you remember.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link">ig</a>
+        <a href="#" class="social-link">fb</a>
+        <a href="#" class="social-link">tw</a>
+        <a href="#" class="social-link">yt</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#menu">The Menu</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reserve">Reservations</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Dining</h4>
+      <ul>
+        <li><a href="#">Private Dining</a></li>
+        <li><a href="#">Chef's Table</a></li>
+        <li><a href="#">Wine Tasting</a></li>
+        <li><a href="#">Corporate Events</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <ul>
+        <li><a href="#">Tue–Thu: 7–11 PM</a></li>
+        <li><a href="#">Fri–Sat: 7 PM–12 AM</a></li>
+        <li><a href="#">Sunday: 12–10 PM</a></li>
+        <li><a href="#">Monday: Closed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Ember & Oak Fine Dining. All rights reserved. Koregaon Park, Pune.</p>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <div class="pitch-tag">Live Demo — Built for Business Pitch</div>
+      <a href="admin.html" style="font-size:0.65rem;letter-spacing:0.12em;color:var(--gold);border:1px solid rgba(201,168,76,0.3);padding:5px 12px;text-decoration:none;">⚙ Admin Dashboard</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Success Toast -->
+<div id="toast" style="
+  position:fixed; bottom:40px; right:40px; z-index:9999;
+  background:var(--gold); color:var(--charcoal);
+  padding:18px 30px; font-size:0.8rem; font-weight:500;
+  letter-spacing:0.12em; text-transform:uppercase;
+  transform:translateY(100px); opacity:0;
+  transition:all 0.4s cubic-bezier(.25,.46,.45,.94);
+  pointer-events:none;
+">✓ Reservation Request Sent</div>
+
+<script src = "script.js"></script>
+
+</body>
+</html>
