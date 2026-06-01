@@ -11,8 +11,8 @@ A modern and responsive restaurant website designed to help businesses attract c
 - Fully responsive design
 
 ## Tech Stack
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 
 ## Business Impact
